@@ -16,7 +16,8 @@ def loadModel():
     race_model = Model(inputs=model.input, outputs=base_model_output)
 
     with zipfile.ZipFile(os.path.join('deepface', 'models', 'race_model_single_batch.zip'), 'r') as zip_ref:
-        zip_ref.extractall(os.path.join('deepface', 'models', 'race_model_single_batch', 'race_model_single_batch.h5'))
+        zip_ref.extractall(os.path.join('deepface', 'models', 'race_model_single_batch.h5'))
 
-    race_model.load_weights(os.path.join('deepface', 'models', 'race_model_single_batch.h5'))
+    race_model.load_weights(
+        os.path.join('deepface', 'models', 'race_model_single_batch.h5', 'race_model_single_batch.h5'))
     return race_model
