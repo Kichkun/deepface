@@ -3,8 +3,7 @@ warnings.filterwarnings("ignore")
 import numpy as np
 from tqdm import tqdm
 import json
-from deepface.extendedmodels import Age, Race
-from deepface.commons import functions
+from deepface import Age, Race
 
 def analyze(img_path, actions = [], models = {}, enforce_detection = True):
 
@@ -118,8 +117,3 @@ def analyze(img_path, actions = [], models = {}, enforce_detection = True):
 		resp_obj += "}"
 		resp_obj = json.loads(resp_obj)
 		return resp_obj
-
-functions.initializeFolder()
-
-#---------------------------
-

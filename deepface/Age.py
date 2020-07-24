@@ -1,4 +1,4 @@
-from deepface.basemodels import VGGFace
+from deepface import VGGFace
 
 import os
 import numpy as np

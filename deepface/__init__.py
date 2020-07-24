@@ -1,1 +1,1 @@
-from .extendedmodels import Age, Race
+from . import Age, Race

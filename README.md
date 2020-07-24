@@ -140,13 +140,14 @@ You can build models once and pass to deepface functions as well. This speeds yo
 
 ```python
 #face recognition
-from deepface.basemodels import VGGFace, OpenFace, Facenet, FbDeepFace, DeepID
+from deepface.basemodels import  OpenFace, Facenet, FbDeepFace, DeepID
+from deepface import VGGFace, Age, Race
 model = VGGFace.loadModel() #all face recognition models have loadModel() function in their interfaces
 DeepFace.verify("img1.jpg", "img2.jpg", model_name = "VGG-Face", model = model)
 
 #facial analysis
 import json
-from deepface.extendedmodels import Age, Gender, Race, Emotion
+from deepface.extendedmodels import  Gender,  Emotion
 models = {}
 models["emotion"] = Emotion.loadModel()
 models["age"] = Age.loadModel()
